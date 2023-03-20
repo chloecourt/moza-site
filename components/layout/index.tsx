@@ -1,3 +1,4 @@
+import MozaLogo from "@/components/layout/logoText";
 import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSession } from "next-auth/react";
@@ -38,18 +39,14 @@ export default function Layout({
         } z-30 transition-all`}
       >
         <nav className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
-          <Link href="/" className="flex items-center font-display text-2xl">
-            <Image
-              src="/images/moza-icon-svg-orange.svg"
-              alt="Precedent logo"
-              width="150"
-              height="150"
-              className="mr-2 rounded-sm"
-            ></Image>
-            <h3 className="text-sm text-orange-400">
-              creative solutions to your digital needs
-            </h3>
-          </Link>
+          <div className="flex flex-row">
+            <Link
+              href="/"
+              className="flex flex-row items-center font-display text-2xl"
+            >
+              <MozaLogo />
+            </Link>
+          </div>
           <ul className="bold mr-5 flex flex-row justify-end gap-x-5 text-orange-400">
             <Link href="/about-us">
               <li>About Us</li>

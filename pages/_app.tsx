@@ -25,7 +25,7 @@ export default function MyApp({
   return (
     <SessionProvider session={session}>
       <RWBProvider>
-        <div className={cx(sfPro.variable, inter.variable)}>
+        <div className={cx(sfPro.variable, inter.variable, "")}>
           <Component {...pageProps} />
         </div>
       </RWBProvider>

@@ -6,13 +6,12 @@ import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
-import Image from "next/image";
-
+import EcomProduct from "@/components/home/ecom";
 export default function Home() {
   return (
     <Layout>
       <motion.div
-        className="max-w-xl px-5 xl:px-0"
+        className="px-5 xl:px-0"
         initial="hidden"
         whileInView="show"
         animate="show"
@@ -42,7 +41,9 @@ export default function Home() {
           className="text-center text-4xl font-bold text-orange-400 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>Your next media solution</Balancer>
+          <Balancer>
+            Your next media solution cookies and salt and chicken
+          </Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
@@ -94,7 +95,7 @@ const features = [
   {
     title: "Interfaces your clients will love",
     description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), and [Framer Motion](https://framer.com/motion)",
+      "brighten up your Shopify or WordPress site some with cutting edge design and integrations to increase sales with less effort",
     large: true,
     demo: <ComponentGrid />,
   },
@@ -125,10 +126,11 @@ const features = [
       "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
     large: true,
     demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
-        <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
-      </div>
+      // <div className="flex items-center justify-center space-x-20">
+      //   <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
+      //   <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
+      // </div>
+      <EcomProduct />
     ),
   },
 ];
