@@ -1,55 +1,38 @@
 import { useState } from "react";
-import { useDemoModal } from "@/components/home/demo-modal";
-import Popover from "@/components/shared/popover";
-import Tooltip from "@/components/shared/tooltip";
-import { ChevronDown } from "lucide-react";
-
+import Image from "next/image";
+import shoeImage from "../../public/images/shoe_product_image 2.jpg";
+import { motion } from "framer-motion";
 export default function ComponentGrid() {
-  const { DemoModal, setShowDemoModal } = useDemoModal();
-  const [openPopover, setOpenPopover] = useState(false);
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-      <DemoModal />
-      <button
-        onClick={() => setShowDemoModal(true)}
-        className="flex w-40 items-center justify-center rounded-md border border-gray-300 px-3 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
+    <div className="flex flex-col justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.4,
+            },
+          },
+        }}
       >
-        <p className="text-gray-600">Modal</p>
-      </button>
-      <Popover
-        content={
-          <div className="w-full rounded-md bg-white p-2 sm:w-40">
-            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              Item 1
-            </button>
-            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              Item 2
-            </button>
-            <button className="flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200">
-              Item 3
-            </button>
+        <div className="flex w-[600px] flex-row items-center justify-around rounded-xl border">
+          <div className="border-blue-500 ">
+            <Image
+              className="self-center rounded-xl"
+              src={shoeImage}
+              width={300}
+              alt="shoe product shot"
+            />
           </div>
-        }
-        openPopover={openPopover}
-        setOpenPopover={setOpenPopover}
-      >
-        <button
-          onClick={() => setOpenPopover(!openPopover)}
-          className="flex w-40 items-center justify-between rounded-md border border-gray-300 px-4 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
-        >
-          <p className="text-gray-600">Popover</p>
-          <ChevronDown
-            className={`h-4 w-4 text-gray-600 transition-all ${
-              openPopover ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </Popover>
-      <Tooltip content="Precedent is an opinionated collection of components, hooks, and utilities for your Next.js project.">
-        <div className="flex w-40 cursor-default items-center justify-center rounded-md border border-gray-300 px-3 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100">
-          <p className="text-gray-600">Tooltip</p>
+          <button className="rounded border border-orange-500 bg-transparent py-2 px-4 font-semibold text-orange-600 hover:border-transparent hover:bg-orange-500 hover:text-white">
+            Buy Now
+          </button>
         </div>
-      </Tooltip>
+      </motion.div>
     </div>
   );
 }
