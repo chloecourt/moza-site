@@ -41,9 +41,7 @@ export default function Home() {
           className="text-center text-4xl font-bold text-orange-400 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>
-            Your next media solution cookies and salt and chicken
-          </Balancer>
+          <Balancer>Your next media solution is right here</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
