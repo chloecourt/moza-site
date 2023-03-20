@@ -11,6 +11,13 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        ...blackA,
+        ...green,
+        ...mauve,
+        ...slate,
+        ...violet,
+      },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
@@ -19,7 +26,11 @@ module.exports = {
         // Tooltip
         "slide-up-fade": "slide-up-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
         "slide-down-fade": "slide-down-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-        // "background-gradient": "background-gradient 15s ease infinite",
+        hide: 'hide 100ms ease-in',
+        slideIn: 'slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        swipeOut: 'swipeOut 100ms ease-out',
+      },
+
       },
       keyframes: {
         // Tooltip
@@ -31,11 +42,17 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateY(-6px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
-        // "background-gradient": {
-        //   "0%": { bg: "0% 50%" },
-        //   "50%": { bg: "100% 50%" },
-        //   "100%": { bg: "0% 50%" },
-        // },
+        hide: {
+          from: { opacity: 1 },
+          to: { opacity: 0 },
+        },
+        slideIn: {
+          from: { transform: 'translateX(calc(100% + var(--viewport-padding)))' },
+          to: { transform: 'translateX(0))' },
+        },
+        swipeOut: {
+          from: { transform: 'translateX(var(--radix-toast-swipe-end-x))' },
+          to: { transform: 'translateX(calc(100% + var(--viewport-padding)))' },
       },
     },
   },
