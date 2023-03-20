@@ -1,3 +1,4 @@
+const { blackA, green, mauve, slate, violet } = require('@radix-ui/colors');
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
 
