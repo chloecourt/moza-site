@@ -3,12 +3,19 @@ import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
+import {
+  Twitter,
+  Pinterest,
+  Tiktok,
+  Instagram,
+  GoogleAdsense,
+  Facebook,
+  GoogleAdwords,
+  Youtube,
+} from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import EcomProduct from "@/components/home/ecom";
-import Pinterest from "@/components/shared/icons/pinterest";
-import Instagram from "@/components/shared/icons/Instagram";
 export default function Home() {
   return (
     <Layout>
@@ -34,9 +41,14 @@ export default function Home() {
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
-          <Pinterest className="h-5 w-5 text-[#1d9bf0]" />
+          <Pinterest className="h-5 w-5 " />
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
           <Instagram className="h-5 w-5" />
+          <GoogleAdsense className="h-5 w-5" />
+          <Tiktok className="h-5 w-5" />
+          <Facebook className="h-5 w-5" />
+          <GoogleAdwords className="h-5 w-5" />
+          <Youtube className="h-5 w-5" />
 
           {/* <Pinterest /> */}
           {/* <p className="text-sm font-semibold text-[#1d9bf0]">
