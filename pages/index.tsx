@@ -7,6 +7,8 @@ import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import EcomProduct from "@/components/home/ecom";
+import Pinterest from "@/components/shared/icons/pinterest";
+import Instagram from "@/components/shared/icons/Instagram";
 export default function Home() {
   return (
     <Layout>
@@ -32,10 +34,14 @@ export default function Home() {
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
+          <Pinterest className="h-5 w-5 text-[#1d9bf0]" />
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
-          <p className="text-sm font-semibold text-[#1d9bf0]">
+          <Instagram className="h-5 w-5" />
+
+          {/* <Pinterest /> */}
+          {/* <p className="text-sm font-semibold text-[#1d9bf0]">
             Follow us on Twitter
-          </p>
+          </p> */}
         </motion.a>
         <motion.h1
           className="text-center text-4xl font-bold text-orange-400 drop-shadow-sm md:text-7xl md:leading-[5rem]"
