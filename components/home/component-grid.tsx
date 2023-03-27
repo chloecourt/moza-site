@@ -8,7 +8,7 @@ import cx from "classnames";
 export const StarRating = ({ className }: { className: string }) => {
   const starIds = ["star1", "star2", "star3", "star4", "star5"];
   return (
-    <div className={cx(className, "mt-2.5 mb-5 flex items-center")}>
+    <div className={cx(className, "mt-2.5 mb-2.5 flex items-center")}>
       {starIds.map((star) => (
         <svg
           key={star}
@@ -29,22 +29,10 @@ export const StarRating = ({ className }: { className: string }) => {
 
 export default function ComponentGrid() {
   return (
-    <div className="flex flex-col justify-center">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.4,
-            },
-          },
-        }}
-      >
-        <div className="flex w-[600px] flex-row items-center justify-around rounded-xl border">
+    <div data-testid="ecommerce-shoe-" className="flex flex-col justify-center">
+      <div>
+        {/* <div className="flex w-[600px] flex-row items-center justify-around rounded-xl border"> */}
+        <div className="grid max-w-[600px] grid-cols-2 items-center gap-1">
           <div className="border-blue-500 ">
             <Image
               className="self-center rounded-xl"
@@ -53,22 +41,22 @@ export default function ComponentGrid() {
               alt="shoe product shot"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2 p-5">
             <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+              Unlimited Lace Up Pro-Sport Kicks, Orange
             </h3>
             {/* Buy Now Button */}
             <button className="w-36 rounded border-transparent bg-orange-500 py-2 px-4 font-semibold text-white hover:border hover:border-orange-500 hover:bg-transparent hover:text-orange-600">
               Buy Now
             </button>
-            <StarRating className={"m-3"} />
+            <StarRating className={"m-0"} />
             {/* Price */}
             <span className="text-3xl font-bold text-gray-900 dark:text-white">
-              $599
+              $185
             </span>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
