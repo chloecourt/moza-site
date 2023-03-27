@@ -13,7 +13,7 @@ import {
   GoogleAdwords,
   Youtube,
 } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
+import SocialMedia from "@/components/home/social-media";
 import ComponentGrid from "@/components/home/component-grid";
 import EcomProduct from "@/components/home/ecom";
 export default function Home() {
@@ -111,7 +111,7 @@ const features = [
   {
     title: "Interfaces your clients will love",
     description:
-      "brighten up your Shopify or WordPress site some with cutting edge design and integrations to increase sales with less effort",
+      "brighten up your Shopify or WordPress site some with cutting edge design and integrations",
     large: true,
     demo: <ComponentGrid />,
   },
@@ -119,7 +119,7 @@ const features = [
     title: "Performance first",
     description:
       "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
-    demo: <WebVitals />,
+    demo: <SocialMedia />,
   },
   {
     title: "One-click Deploy",
@@ -141,12 +141,6 @@ const features = [
     description:
       "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
     large: true,
-    demo: (
-      // <div className="flex items-center justify-center space-x-20">
-      //   <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
-      //   <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
-      // </div>
-      <EcomProduct />
-    ),
+    demo: <div className="flex items-center justify-center space-x-20"></div>,
   },
 ];
