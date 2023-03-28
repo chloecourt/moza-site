@@ -10,9 +10,9 @@ export default function MozaLogo() {
           alt="moza logo"
         />
       </div>
-      <h3 className="hidden self-end text-sm text-orange-400 md:block lg:block">
+      {/* <h3 className="hidden self-end text-sm text-orange-400 md:block lg:block">
         creative solutions to your digital needs
-      </h3>
+      </h3> */}
     </div>
   );
 }
