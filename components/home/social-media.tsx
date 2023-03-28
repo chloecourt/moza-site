@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import cx from "classnames";
 import CountingNumbers from "@/components/shared/counting-numbers";
 import {
   Pinterest,
@@ -8,6 +9,7 @@ import {
   Facebook,
   GoogleAdsense,
   Tiktok,
+  Twitter,
 } from "@/components/shared/icons";
 import { ReactNode } from "react";
 
@@ -19,7 +21,7 @@ const socialIcons = [
     completion: 0.75,
   },
   {
-    component: <Instagram className="absolute inset-0 z-10 m-auto h-12 w-12" />,
+    component: <Instagram className="absolute inset-0 z-10 m-auto w-10" />,
     key: "interest-fulfill",
     fill: false,
     completion: 0.7,
@@ -56,20 +58,45 @@ const socialIcons = [
     fill: true,
     completion: 0.8,
   },
+  // {
+  //   component: (
+  //     <GoogleAdsense
+  //       className="absolute inset-0 z-10 m-auto h-14
+  //    w-14
+  //   "
+  //     />
+  //   ),
+  //   key: "GoogleAdsense-fulfill",
+  //   fill: false,
+  //   completion: 0.8,
+  // },
+  // {
+  //   component: (
+  //     <Twitter
+  //       className="absolute inset-0 z-10 m-auto h-12
+  //    w-12 text-[#1d9bf0]
+  //   "
+  //     />
+  //   ),
+  //   key: "twitter-fulfill",
+  //   fill: false,
+  //   completion: 0.8,
+  // },
 ];
 
 export const SocialIcon = ({
   component,
   fill,
   completion,
+  className,
 }: {
   component: ReactNode;
   fill: boolean;
   completion: number;
+  className?: string;
 }) => {
-  const percentages = {};
   return (
-    <div className="h-20 w-20">
+    <div className={cx("flex h-24 w-20 flex-col", className)}>
       <div className="relative h-full w-full">
         <motion.svg
           className="absolute inset-0 m-auto"
@@ -96,21 +123,40 @@ export const SocialIcon = ({
         </motion.svg>
         {component}
       </div>
+      <p className="self-center">{`${completion * 100}%`}</p>
     </div>
   );
 };
 
 export default function SocialMedia() {
   return (
-    <div className="grid grid-cols-3 grid-rows-2 gap-4 p-3">
-      {socialIcons.map(({ component, key, fill, completion }) => (
-        <SocialIcon
-          component={component}
-          key={key}
-          fill={fill}
-          completion={completion}
-        />
-      ))}
+    <div className="flex flex-row items-baseline">
+      <SocialIcon
+        className="hidden min-[505px]:flex"
+        component={
+          <Twitter className="absolute inset-0 z-10 m-auto h-12 w-12 text-[#1d9bf0]" />
+        }
+        fill={false}
+        completion={0.6}
+      />
+      <div className="grid grid-cols-3 grid-rows-2 gap-4 p-3">
+        {socialIcons.map(({ component, key, fill, completion }) => (
+          <SocialIcon
+            component={component}
+            key={key}
+            fill={fill}
+            completion={completion}
+          />
+        ))}
+      </div>
+      <SocialIcon
+        className="hidden min-[505px]:flex"
+        component={
+          <GoogleAdsense className="absolute inset-0 z-10 m-auto h-14 w-14" />
+        }
+        fill={false}
+        completion={0.67}
+      />
     </div>
   );
 }
