@@ -14,6 +14,12 @@ import {
   Youtube,
 } from "@/components/shared/icons";
 import { SocialMedia, ShoeProduct, LineChart, Chat } from "@/components/home";
+
+//TODO: create contact us section
+//TODO: create motion for MOZA logo
+//TODO: add domain
+// TODO: add animation to chat block
+
 export default function Home() {
   return (
     <Layout>
