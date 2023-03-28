@@ -105,7 +105,8 @@ export default function Home() {
 const features = [
   {
     title: "Attractive Interfaces",
-    description: "cutting edge design and integrations",
+    description:
+      "brighten up your Shopify or WordPress site some with cutting edge design and integrations",
     large: true,
     demo: <ShoeProduct />,
   },
