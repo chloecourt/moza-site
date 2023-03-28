@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import useScroll from "@/lib/hooks/use-scroll";
 import Meta from "./meta";
-import UserDropdown from "./user-dropdown";
 
 export default function Layout({
   meta,
