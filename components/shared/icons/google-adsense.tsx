@@ -3,7 +3,7 @@ export default function GoogleAdsense({ className }: { className?: string }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-489 83 669 668"
-      enable-background="new -489 83 669 668"
+      enableBackground="new -489 83 669 668"
       className={className}
     >
       <circle fill="#ffffff" cx="-154.5" cy="417" r="320" />

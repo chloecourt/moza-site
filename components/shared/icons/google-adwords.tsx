@@ -3,7 +3,7 @@ export default function GoogleAdwords({ className }: { className?: string }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      enable-background="new 0 0 512 512"
+      enableBackground="new 0 0 512 512"
       className={className}
     >
       <g>
