@@ -13,9 +13,7 @@ import {
   GoogleAdwords,
   Youtube,
 } from "@/components/shared/icons";
-import SocialMedia from "@/components/home/social-media";
-import ComponentGrid from "@/components/home/component-grid";
-import EcomProduct from "@/components/home/ecom";
+import { SocialMedia, ShoeProduct, LineChart } from "@/components/home";
 export default function Home() {
   return (
     <Layout>
@@ -34,12 +32,12 @@ export default function Home() {
           },
         }}
       >
-        <motion.a
+        {/* <motion.a
           variants={FADE_DOWN_ANIMATION_VARIANTS}
           href="https://twitter.com/chloecourt08"
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mb-5 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+          className="mx-auto mb-5 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-white px-7 py-2 transition-colors hover:bg-blue-200"
         >
           <Pinterest className="h-5 w-5 " />
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
@@ -49,17 +47,14 @@ export default function Home() {
           <Facebook className="h-5 w-5" />
           <GoogleAdwords className="h-5 w-5" />
           <Youtube className="h-5 w-5" />
-
-          {/* <Pinterest /> */}
-          {/* <p className="text-sm font-semibold text-[#1d9bf0]">
-            Follow us on Twitter
-          </p> */}
-        </motion.a>
+        </motion.a> */}
         <motion.h1
           className="text-center text-4xl font-bold text-orange-400 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>Your next media solution is right here</Balancer>
+          <Balancer ratio={0.8}>
+            Your next media solution is right here
+          </Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
@@ -109,11 +104,10 @@ export default function Home() {
 
 const features = [
   {
-    title: "Interfaces your clients will love",
-    description:
-      "brighten up your Shopify or WordPress site some with cutting edge design and integrations",
+    title: "Attractive Interfaces",
+    description: "cutting edge design and integrations",
     large: true,
-    demo: <ComponentGrid />,
+    demo: <ShoeProduct />,
   },
   {
     title: "Performance first",
@@ -125,16 +119,7 @@ const features = [
     title: "One-click Deploy",
     description:
       "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
-    demo: (
-      <a href={"/"}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={120}
-        />
-      </a>
-    ),
+    demo: <LineChart />,
   },
   {
     title: "Built-in Auth + Database",
