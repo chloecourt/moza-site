@@ -40,7 +40,7 @@ export default function Layout({
               <MozaLogo />
             </Link>
           </div>
-          <ul className="mr-5 flex flex-row justify-end gap-x-5 font-semibold text-orange-400">
+          <ul className="mr-5 flex flex-row justify-end gap-x-5 text-lg text-orange-400">
             <Link href="/about-us">
               <li>About Us</li>
             </Link>
