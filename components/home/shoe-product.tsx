@@ -31,7 +31,7 @@ export default function ShoeProduct() {
   return (
     <div data-testid="ecommerce-shoe-" className="flex flex-col justify-center">
       <div>
-        <div className="mx-3 grid max-w-[600px] grid-cols-2 items-center gap-5">
+        <div className="mx-3 grid max-w-[680px] grid-cols-2 items-center gap-5">
           <div className="border-blue-500 ">
             <Image
               className="self-center rounded-xl"
