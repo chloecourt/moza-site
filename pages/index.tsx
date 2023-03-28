@@ -13,7 +13,7 @@ import {
   GoogleAdwords,
   Youtube,
 } from "@/components/shared/icons";
-import { SocialMedia, ShoeProduct, LineChart } from "@/components/home";
+import { SocialMedia, ShoeProduct, LineChart, Chat } from "@/components/home";
 export default function Home() {
   return (
     <Layout>
@@ -52,17 +52,15 @@ export default function Home() {
           className="text-center text-4xl font-bold text-orange-400 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer ratio={0.8}>
-            Your next media solution is right here
-          </Balancer>
+          <Balancer ratio={0.8}>Your ecommerce solution is right here</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            creating a customized ecommerce experiences to mobile app
-            development for you next startup
+            creating customized ecommerce experiences that grow your audience
+            and business
           </Balancer>
         </motion.p>
         <motion.div
@@ -104,29 +102,27 @@ export default function Home() {
 
 const features = [
   {
-    title: "Attractive Interfaces",
+    title: "Design That Speaks to Your Brand",
     description:
       "brighten up your Shopify or WordPress site some with cutting edge design and integrations",
     large: true,
     demo: <ShoeProduct />,
   },
   {
-    title: "Performance first",
-    description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
-    demo: <SocialMedia />,
+    title: "Automate Workflows",
+    description: "leverage cutting edge tools to reduce your workload",
+    demo: <Chat />,
   },
   {
-    title: "One-click Deploy",
-    description:
-      "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
+    title: "Benchmarking Success",
+    description: "helping you focus on metrics that improve your business.",
     demo: <LineChart />,
   },
   {
-    title: "Built-in Auth + Database",
+    title: "Marketing Across Channels",
     description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "We drive growth across channels so you can focus on creating content",
     large: true,
-    demo: <div className="flex items-center justify-center space-x-20"></div>,
+    demo: <SocialMedia />,
   },
 ];
