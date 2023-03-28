@@ -16,11 +16,13 @@ const socialIcons = [
     component: <Pinterest className="absolute inset-0 z-10 m-auto h-14 w-14" />,
     key: "pinterest-fulfull",
     fill: false,
+    completion: 0.75,
   },
   {
     component: <Instagram className="absolute inset-0 z-10 m-auto h-12 w-12" />,
     key: "interest-fulfill",
     fill: false,
+    completion: 0.7,
   },
   {
     component: (
@@ -28,16 +30,19 @@ const socialIcons = [
     ),
     key: "google-adwords-fulfill",
     fill: false,
+    completion: 1,
   },
   {
     component: <Youtube className="absolute inset-0 z-10 m-auto h-12 w-12" />,
     key: "youtube-fulfill",
     fill: false,
+    completion: 0.4,
   },
   {
     component: <Tiktok className="absolute inset-0 z-10 m-auto h-12 w-12" />,
     key: "Tiktok-fulfill",
     fill: false,
+    completion: 0.8,
   },
   {
     component: (
@@ -49,18 +54,22 @@ const socialIcons = [
     ),
     key: "facebook-fulfill",
     fill: true,
+    completion: 0.8,
   },
 ];
 
 export const SocialIcon = ({
   component,
   fill,
+  completion,
 }: {
   component: ReactNode;
   fill: boolean;
+  completion: number;
 }) => {
+  const percentages = {};
   return (
-    <div data-testid="social-media-icon" className="h-20 w-20">
+    <div className="h-20 w-20">
       <div className="relative h-full w-full">
         <motion.svg
           className="absolute inset-0 m-auto"
@@ -70,14 +79,14 @@ export const SocialIcon = ({
         >
           <motion.circle
             initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
+            animate={{ pathLength: completion }}
             whileInView={{ pathLength: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 2, ease: "easeOut" }}
             strokeWidth={7}
             strokeDasharray="0 1"
             strokeLinecap="round"
-            transform="rotate(-90 50 50)"
+            transform="rotate(90 50 50)"
             cx="50"
             cy="50"
             r="45"
@@ -93,21 +102,14 @@ export const SocialIcon = ({
 
 export default function SocialMedia() {
   return (
-    // <>
-    //   <SocialIcon
-    //     component={
-    //       <Pinterest className="absolute inset-0 z-10 m-auto h-14 w-14" />
-    //     }
-    //   />
-    //   <SocialIcon
-    //     component={
-    //       <Youtube className="absolute inset-0 z-10 m-auto h-12 w-12" />
-    //     }
-    //   />
-    // </>
-    <div className="grid grid-cols-3 grid-rows-2 gap-4">
-      {socialIcons.map(({ component, key, fill }) => (
-        <SocialIcon component={component} key={key} fill={fill} />
+    <div className="grid grid-cols-3 grid-rows-2 gap-4 p-3">
+      {socialIcons.map(({ component, key, fill, completion }) => (
+        <SocialIcon
+          component={component}
+          key={key}
+          fill={fill}
+          completion={completion}
+        />
       ))}
     </div>
   );
