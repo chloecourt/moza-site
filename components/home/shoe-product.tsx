@@ -3,7 +3,7 @@ import shoeImage from "../../public/images/shoe_product_image 2.jpg";
 import { motion } from "framer-motion";
 import cx from "classnames";
 import ShopifyIcon from "../shared/icons/shopifyIcon";
-
+import Balancer from "react-wrap-balancer";
 // TODO: make responsive/ horizontal until min-[550px]
 //TODO: make price size responsive
 
@@ -11,7 +11,7 @@ import ShopifyIcon from "../shared/icons/shopifyIcon";
 export const StarRating = ({ className }: { className: string }) => {
   const starIds = ["star1", "star2", "star3", "star4", "star5"];
   return (
-    <div className={cx(className, "mt-2.5 mb-2.5 flex items-center")}>
+    <div className={cx(className, "my-2 flex items-center")}>
       {starIds.map((star) => (
         <svg
           key={star}
@@ -32,30 +32,38 @@ export const StarRating = ({ className }: { className: string }) => {
 
 export default function ShoeProduct() {
   return (
-    <div data-testid="ecommerce-shoe-" className="flex flex-col justify-center">
-      {/* <div> */}
-      <div className="mx-3 grid max-w-[680px] grid-cols-2 items-center gap-5">
-        <div className="border-blue-500 ">
-          <Image
-            className="self-center rounded-xl"
-            src={shoeImage}
-            width={300}
-            alt="shoe product shot"
-          />
+    <div
+      data-testid="ecommerce-shoe"
+      className="min-w-375 flex flex-col items-center justify-center"
+    >
+      <div className="mx-3 grid min-w-[375px] grid-cols-2 items-center gap-5">
+        <div
+          data-testid="shoe image container"
+          className="flex-start flex flex-col items-center justify-center gap-1"
+        >
+          <div className="">
+            <Image
+              className="self-center rounded-xl"
+              src={shoeImage}
+              width={300}
+              alt="shoe product shot"
+            />
+          </div>
+          <StarRating className={"min-[500px]:hidden"} />
         </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            Unlimited Lace Up Pro-Sport Kicks, Orange
+        <div className="flex max-w-[260px] flex-col items-start gap-2">
+          <h3 className="text-base font-semibold tracking-tight text-gray-900 dark:text-white sm:text-xl">
+            Unlimited Lace Up Pro-Sport Kicks
           </h3>
           {/* Buy Now Button */}
-          <button className="w-36 rounded border-transparent bg-orange-500 py-2 px-4 font-semibold text-white hover:border hover:border-orange-500 hover:bg-transparent hover:text-orange-600">
+          <button className="w-24 rounded border-transparent bg-orange-500 py-1 px-2 text-sm font-semibold text-white hover:border hover:border-orange-500 hover:bg-transparent hover:text-orange-600 sm:w-36 sm:py-2 sm:px-4">
             Buy Now
           </button>
-          <StarRating className={"m-0"} />
+          <StarRating className={"hidden min-[500px]:inline-flex"} />
           {/* Price */}
-          <span className="flex flex-row font-bold text-gray-900 dark:text-white sm:text-3xl">
+          <span className="flex flex-row items-center text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">
             $185
-            <ShopifyIcon className="mx-3 h-8 w-8 animate-swing" />
+            <ShopifyIcon className="mx-3 h-6 w-6 animate-swing" />
           </span>
         </div>
       </div>

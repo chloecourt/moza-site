@@ -16,10 +16,14 @@ import {
 import { SocialMedia, ShoeProduct, LineChart, Chat } from "@/components/home";
 
 //TODO: create contact us section
-//TODO: create motion for MOZA logo
+//TODO: create motion for MOZA logo make it bigger on large screen
 //TODO: add domain
 // TODO: add animation to chat block
-
+// TODO: change og text from precendent to moza
+// TODO: add DNS domain name
+// TODO: remove animation from shopify svg add more margin
+// TODO: create subscribe at the bottom
+// TODO: create contact us route
 export default function Home() {
   return (
     <Layout>
