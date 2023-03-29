@@ -36,7 +36,7 @@ export default function ShoeProduct() {
       data-testid="ecommerce-shoe"
       className="min-w-375 flex flex-col items-center justify-center"
     >
-      <div className="mx-3 grid min-w-[375px] grid-cols-2 items-center gap-5">
+      <div className="mx-3 grid min-w-[375px] grid-cols-2 gap-5 sm:items-center">
         <div
           data-testid="shoe image container"
           className="flex-start flex flex-col items-center justify-center gap-1"
@@ -51,7 +51,7 @@ export default function ShoeProduct() {
           </div>
           <StarRating className={"min-[500px]:hidden"} />
         </div>
-        <div className="flex max-w-[260px] flex-col items-start gap-2">
+        <div className="flex max-w-[260px] flex-col items-start gap-1 md:gap-2">
           <h3 className="text-base font-semibold tracking-tight text-gray-900 dark:text-white sm:text-xl">
             Unlimited Lace Up Pro-Sport Kicks
           </h3>
@@ -61,7 +61,7 @@ export default function ShoeProduct() {
           </button>
           <StarRating className={"hidden min-[500px]:inline-flex"} />
           {/* Price */}
-          <span className="flex flex-row items-center text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">
+          <span className="md:2xl flex flex-row items-center text-xl font-bold text-gray-900 dark:text-white sm:text-xl">
             $185
             <ShopifyIcon className="mx-3 h-6 w-6 animate-swing" />
           </span>
