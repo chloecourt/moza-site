@@ -34,8 +34,8 @@ export default function Layout({
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
-              src="/images/mozalogo.png"
-              alt="Precedent logo"
+              src="/images/mozaLogo.png"
+              alt="Moza Logo"
               width="130"
               height="130"
               // className="mr-2 rounded-sm"
