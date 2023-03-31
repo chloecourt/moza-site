@@ -1,9 +1,12 @@
 import Layout from "@/components/layout";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
     <Layout>
-      <p className="z-10 ml-8 self-start">Back</p>
+      <Link className="z-10 self-start" href="/">
+        <p className="z-10 ml-8 self-start text-neutral-500">{`Back`}</p>
+      </Link>
       <ol className="z-10 my-2 mx-auto border-l border-neutral-300 px-6 dark:border-neutral-500">
         <h1 className="text-2xl font-bold text-orange-400 drop-shadow-sm md:text-3xl md:leading-[5rem]">
           Consultation Process
