@@ -62,7 +62,7 @@ export default function Home() {
           className="text-center text-4xl font-bold text-orange-400 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer ratio={0.8}>Your ecommerce solution is right here</Balancer>
+          <Balancer>Your ecommerce solution is right here</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
@@ -114,7 +114,7 @@ const features = [
   {
     title: "Design That Speaks to Your Brand",
     description:
-      "brighten up your Shopify or WordPress site some with cutting edge design and integrations",
+      "tailor your Shopify or WordPress site to attract more customers",
     large: true,
     demo: <ShoeProduct />,
   },
