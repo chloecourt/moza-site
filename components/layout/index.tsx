@@ -41,7 +41,7 @@ export default function Layout({
             />
           </Link>
           <ul className="mr-5 flex flex-row justify-end gap-x-5 text-lg font-semibold text-orange-400">
-            <Link href="/about-us">
+            <Link href="/hire-us">
               <li>Hire Us</li>
             </Link>
           </ul>
