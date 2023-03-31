@@ -32,43 +32,37 @@ export const StarRating = ({ className }: { className: string }) => {
 
 export default function ShoeProduct() {
   return (
-    <div
-      data-testid="ecommerce-shoe"
-      className="flex flex-col items-center justify-center"
-    >
-      <div className="mx-3 grid grid-cols-2 gap-5 sm:items-center">
-        <div
-          data-testid="shoe image container"
-          className="flex-start flex flex-col items-center justify-center gap-1"
-        >
-          <div>
-            <Image
-              className="self-center rounded-xl"
-              src={shoeImage}
-              width={300}
-              alt="shoe product shot"
-            />
-          </div>
-          <StarRating className={"min-[500px]:hidden"} />
+    <div className="mx-3 grid grid-cols-2 gap-5 sm:items-center">
+      <div
+        data-testid="shoe image container"
+        className="flex-start flex flex-col items-center justify-center gap-1"
+      >
+        <div>
+          <Image
+            className="self-center rounded-xl"
+            src={shoeImage}
+            width={300}
+            alt="shoe product shot"
+          />
         </div>
-        <div className="flex max-w-[260px] flex-col items-start gap-1 md:gap-2">
-          <h3 className="break-words text-base font-semibold tracking-tight text-gray-900 dark:text-white sm:text-xl">
-            Unlimited Lace Up Pro-Sport Kicks
-          </h3>
-
-          {/* Buy Now Button */}
-          <button className="w-24 rounded border-transparent bg-orange-500 py-1 px-2 text-sm font-semibold text-white hover:border hover:border-orange-500 hover:bg-transparent hover:text-orange-600 sm:w-36 sm:py-2 sm:px-4">
-            Buy Now
-          </button>
-          <StarRating className={"hidden min-[500px]:inline-flex"} />
-          {/* Price */}
-          <span className="md:2xl flex flex-row items-center text-xl font-bold text-gray-900 dark:text-white sm:text-xl">
-            $185
-            <ShopifyIcon className="mx-3 h-6 w-6 animate-swing" />
-          </span>
-        </div>
+        <StarRating className={"min-[500px]:hidden"} />
       </div>
-      {/* </div> */}
+      <div className="flex max-w-[260px] flex-col items-start gap-1 md:gap-2">
+        <h3 className="break-words text-base font-semibold tracking-tight text-gray-900 dark:text-white sm:text-xl">
+          Unlimited Lace Up Pro-Sport Kicks
+        </h3>
+
+        {/* Buy Now Button */}
+        <button className="w-24 rounded border-transparent bg-orange-500 py-1 px-2 text-sm font-semibold text-white hover:border hover:border-orange-500 hover:bg-transparent hover:text-orange-600 sm:w-36 sm:py-2 sm:px-4">
+          Buy Now
+        </button>
+        <StarRating className={"hidden min-[500px]:inline-flex"} />
+        {/* Price */}
+        <span className="md:2xl flex flex-row items-center text-xl font-bold text-gray-900 dark:text-white sm:text-xl">
+          $185
+          <ShopifyIcon className="mx-3 h-6 w-6 animate-swing" />
+        </span>
+      </div>
     </div>
   );
 }
