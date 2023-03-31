@@ -38,8 +38,7 @@ export default function Layout({
               alt="Moza Logo"
               width="130"
               height="130"
-              // className="mr-2 rounded-sm"
-            ></Image>
+            />
           </Link>
           <ul className="mr-5 flex flex-row justify-end gap-x-5 text-lg font-semibold text-orange-400">
             <Link href="/about-us">
